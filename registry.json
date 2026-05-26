@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "plugins": [
+    {
+      "id": "librelink-gcm",
+      "name": "LibreLink GCM",
+      "version": "1.1.0",
+      "official": false,
+      "author": "Asbjørn Alexander Velve Fellinghaug (asbjorn)",
+      "description": "Adds a watermark to the bottom-right of the screen similar to the one found on unactivated Windows 10/11",
+      "repository": "https://github.com/asbjorn/noctalia-plugins",
+      "license": "MIT",
+      "tags": [
+          "Bar", "Utility", "Productivity"
+      ],
+      "lastUpdated": "2026-05-26T12:19:010+01:00"
+    }
+]}

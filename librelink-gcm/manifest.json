@@ -1,0 +1,30 @@
+{
+  "id": "librelink-gcm",
+  "name": "LibreLink GCM",
+  "version": "1.0.0",
+  "minNoctaliaVersion": "3.6.0",
+  "author": "Asbjørn Alexander Velve Fellinghaug (asbjorn)",
+  "license": "MIT",
+  "repository": "https://github.com/asbjorn/noctalia-plugins",
+  "description": "Display LibreLink GCM glucose readings with trend arrows and a history chart.",
+  "tags": ["Bar", "Panel", "Health"],
+  "entryPoints": {
+    "main": "Main.qml",
+    "barWidget": "BarWidget.qml",
+    "panel": "Panel.qml",
+    "settings": "Settings.qml"
+  },
+  "dependencies": {
+    "plugins": []
+  },
+  "metadata": {
+    "defaultSettings": {
+      "email": "",
+      "region": "EU",
+      "units": "mmol/L",
+      "lowThreshold": 70,
+      "highThreshold": 180,
+      "staleMinutes": 15
+    }
+  }
+}

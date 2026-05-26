@@ -1,0 +1,9 @@
+{
+  "email": "asbjorn@fellinghaug.com",
+  "region": "EU",
+  "units": "mmol/L",
+  "lowThreshold": 70,
+  "highThreshold": 180,
+  "staleMinutes": 15,
+  "patientId": "4004eae6-4f0e-11ea-9702-0242ac110002"
+}
