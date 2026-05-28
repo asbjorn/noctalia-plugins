@@ -1,7 +1,7 @@
 {
   "id": "librelink-cgm",
   "name": "LibreLink CGM",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "minNoctaliaVersion": "3.6.0",
   "author": "Asbjørn Alexander Velve Fellinghaug (asbjorn)",
   "license": "MIT",
