@@ -5,6 +5,7 @@
             "id": "librelink-cgm",
             "name": "LibreLink CGM",
             "version": "1.2.0",
+            "minNoctaliaVersion": "3.6.0",
             "official": false,
             "author": "Asbjørn Alexander Velve Fellinghaug (asbjorn)",
             "description": "Display LibreLink CGM glucose readings with trend arrows and a history chart.",
@@ -15,7 +16,7 @@
                 "Utility",
                 "Productivity"
             ],
-            "lastUpdated": "2026-05-26T12:19:010+01:00"
+            "lastUpdated": "2026-05-28T12:19:010+01:00"
         }
     ]
 }
