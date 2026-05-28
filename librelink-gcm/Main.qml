@@ -519,6 +519,21 @@ Item {
         insertProcess.running = true
     }
 
+    function onSystemResume() {
+        Logger.i("CGM", "System resumed from suspend — resetting connection state")
+        // Clear any flags that may be stuck from an in-flight request during suspend
+        _requestInFlight = false
+        _storeInProgress = false
+        _hashInProgress = false
+        _lookupInProgress = false
+        // Force re-authentication: token may have expired during sleep
+        authToken = ""
+        accountId = ""
+        // Restart timer so the next tick is a fresh 60s from now, then fetch immediately
+        pollTimer.restart()
+        fetchGraphData()
+    }
+
     function checkThresholdAlert() {
         if (currentBG <= 0) return
         if (bgStatus !== "high" && bgStatus !== "low") return
@@ -882,6 +897,33 @@ Item {
             initDbProcess.errorBuffer = ""
             initDbProcess.command = ["sqlite3", _dbPath, sql]
             initDbProcess.running = true
+        }
+    }
+
+    // Watch for system suspend/resume via logind D-Bus signal.
+    // PrepareForSleep(false) = system just resumed.
+    Process {
+        id: suspendWatcher
+        command: [
+            "dbus-monitor", "--system",
+            "type='signal',sender='org.freedesktop.login1',interface='org.freedesktop.login1.Manager',member='PrepareForSleep'"
+        ]
+        running: true
+
+        stdout: SplitParser {
+            onRead: data => {
+                if (data.trim() === "boolean false") {
+                    root.onSystemResume()
+                }
+            }
+        }
+
+        onRunningChanged: {
+            if (!running) {
+                // dbus-monitor exited unexpectedly — restart it
+                Logger.w("CGM", "suspendWatcher exited, restarting")
+                Qt.callLater(function() { suspendWatcher.running = true })
+            }
         }
     }
 

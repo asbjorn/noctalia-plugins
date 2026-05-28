@@ -8,6 +8,14 @@ This plugin is designed after the gnome-shell extension for LibreLinkUp. You ent
 
 The plugin then periodically reads measurements from LibreLinkUp (cloud) and stores them in a locally SQLite database. These data points are also visualized and any values above or below the predefined thresholds will trigger a warning.
 
+## Requirements
+
+For Debian based systems you need to have the `libsecret-tools` package installed. This is for storing and reading from the keyring.
+
+```sh
+sudo apt install libsecret-tools
+```
+
 ## Screenshot
 
 ![LibreLink GCM](p1.png)
