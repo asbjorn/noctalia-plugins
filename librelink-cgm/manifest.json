@@ -3,7 +3,7 @@
   "name": "LibreLink CGM",
   "version": "1.1.0",
   "minNoctaliaVersion": "3.6.0",
-  "author": "Asbjørn A. V. Fellinghaug",
+  "author": "Asbjørn Alexander Velve Fellinghaug (asbjorn)",
   "license": "MIT",
   "repository": "https://github.com/asbjorn/noctalia-plugins",
   "description": "Display LibreLink CGM glucose readings with trend arrows and a history chart.",

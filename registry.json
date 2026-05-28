@@ -1,13 +1,13 @@
 {
   "version": 1,
   "plugins": [
-    {
-      "id": "librelink-gcm",
-      "name": "LibreLink GCM",
-      "version": "1.1.0",
+    
+      "id": "librelink-cgm",
+      "name": "LibreLink CGM",
+      "version": "2.1.0",
       "official": false,
       "author": "Asbjørn Alexander Velve Fellinghaug (asbjorn)",
-      "description": "Adds a watermark to the bottom-right of the screen similar to the one found on unactivated Windows 10/11",
+      "description": "Display LibreLink CGM glucose readings with trend arrows and a history chart.",
       "repository": "https://github.com/asbjorn/noctalia-plugins",
       "license": "MIT",
       "tags": [
