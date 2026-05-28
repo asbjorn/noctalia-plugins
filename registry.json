@@ -16,6 +16,9 @@
                 "Utility",
                 "Productivity"
             ],
+            "dependencies": {
+                "plugins": []
+            },
             "lastUpdated": "2026-05-28T12:19:010+01:00"
         }
     ]
